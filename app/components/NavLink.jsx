@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 
-const NavLink = ({ href, title, titulo, language, argentina, america }) => {
+const NavLink = ({ href, title, titulo, language, }) => {
   return (
     <Link
       href={href}

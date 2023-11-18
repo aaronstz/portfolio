@@ -100,16 +100,13 @@ const Navbar = ({ language, setLanguage }) => {
                   title={link.title}
                   titulo={link.titulo}
                   language={language}
-                  setLanguage={setLanguage}
-                  argentina="./images/argentina.png"
-                  america="./images/united-states.png"
                 />
               </li>
             ))}
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ? <MenuOverlay links={navLinks} language={language} setLanguage={setLanguage} /> : null}
     </nav>
   );
 };

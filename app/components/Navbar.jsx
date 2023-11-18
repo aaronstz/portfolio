@@ -39,25 +39,7 @@ const Navbar = ({ language, setLanguage }) => {
         >
           gAg
         </Link>
-        {/* <div className="flex justify-center items-center">
-          <button className="h-10 w-10" onClick={handleClick}>
-            {language === "en" ? (
-              <img
-                src="./images/united-states.png"
-                alt="US"
-                width={25}
-                height={25}
-              />
-            ) : (
-              <img
-                src="./images/argentina.png"
-                alt="argentina"
-                width={25}
-                height={25}
-              />
-            )}
-          </button>
-        </div> */}
+
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button
@@ -106,7 +88,7 @@ const Navbar = ({ language, setLanguage }) => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} language={language} setLanguage={setLanguage} /> : null}
+      {navbarOpen ? <MenuOverlay links={navLinks} language={language} setLanguage={setLanguage} navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen}/> : null}
     </nav>
   );
 };

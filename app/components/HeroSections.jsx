@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Link from "next/link";
+// import Link from "next/link";
 import useDownloader from "react-use-downloader";
 import spa from "../languages/es.json";
 import en from "../languages/en.json";
@@ -10,11 +11,19 @@ import en from "../languages/en.json";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSections = ({ language }) => {
+  const scrollToContact = () => {
+    scroll.scrollTo("#contact", {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuad",
+    });
+  };
+
   const { download } = useDownloader();
   const fileURLENG = "/Resume-GadielAaronGerez.pdf";
   const filenameENG = "Resume-GadielAaronGerez.pdf";
   const fileURLSPA = "/CV-GadielAaronGerez.pdf";
-  const filenameSPA= "CV-GadielAaronGerez.pdf";
+  const filenameSPA = "CV-GadielAaronGerez.pdf";
 
   return (
     <section className="lg:py-16">
@@ -35,7 +44,7 @@ const HeroSections = ({ language }) => {
               Hello
             </span> */}
               <br></br>
-              
+
               <TypeAnimation
                 sequence={[
                   "Aaron",
@@ -64,10 +73,14 @@ const HeroSections = ({ language }) => {
               {en[0].description}
             </p>
             <div>
-              <Link href="#contact" className="">
-                <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white ">
+              <Link 
+                to="contact"
+                smooth={true}
+                duration={800}
+                className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white cursor-pointer"
+                onClick={scrollToContact}
+                >
                   Hire Me
-                </button>
               </Link>
               <button
                 onClick={() => download(fileURLENG, filenameENG)}
@@ -85,7 +98,7 @@ const HeroSections = ({ language }) => {
             transition={{ duration: 0.5 }}
             className="col-span-4 place-self-center mt-4 lg:mt-0"
           >
-            <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+            <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative hover:animate-jump animate-duration-[500ms]">
               <Image
                 src="/images/hero-image1.png"
                 alt="hero image"
@@ -133,10 +146,14 @@ const HeroSections = ({ language }) => {
               {spa[0].description}
             </p>
             <div>
-              <Link href="#contact" className="">
-                <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white ">
+            <Link 
+                to="contact"
+                smooth={true}
+                duration={800}
+                className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-primary-500 to-secondary-500 hover:bg-slate-200 text-white cursor-pointer"
+                onClick={scrollToContact}
+                >
                   Contratame
-                </button>
               </Link>
               <button
                 onClick={() => download(fileURLSPA, filenameSPA)}

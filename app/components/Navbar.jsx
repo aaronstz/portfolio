@@ -63,7 +63,9 @@ const Navbar = ({ language, setLanguage }) => {
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            <button onClick={handleClick}>{
+            <button 
+              className="hover:animate-jump animate-duration-[1200ms]"
+              onClick={handleClick}>{
               language === 'en' ? (
                 <img src="./images/united-states.png"
                 alt="US"

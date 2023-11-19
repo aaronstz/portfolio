@@ -14,6 +14,7 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      safelist: ['animate-[tada-2s-ease-in-out]']
     },
     colors: {
       ...colors,
@@ -21,5 +22,7 @@ module.exports = {
       secondary: colors.indigo,
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }

@@ -20,5 +20,12 @@
       "image": "/images/proyectos/PokeApi.png",
       "gitUrl": "https://github.com/aaronstz/pokeapi",
       "previewUrl": "https://pokeapi-aaronstz.vercel.app"
+    },
+    {
+      "id": 3,
+      "title": "Portfolio",
+      "description": "Mi portfolio personal de desarrollador. Realizado con Next.js y estilizado con Tailwind CSS, este proyecto representa mi dedicación a crear experiencias web excepcionales.",
+      "image": "/images/proyectos/Portfolio.jpg",
+      "gitUrl": "https://github.com/aaronstz/portfolio"
     }
 ]]

@@ -1,0 +1,34 @@
+[
+  {
+    "title": "HeroSection",
+    "subtitle": "Hello, I'm",
+    "description": "Strategy | Problem Solving | Communication | Analytical Skills",
+    "about": "Hello! My name is Aaron, I'm a Full Stack Developer from Buenos Aires, Argentina. I love working as a team, learning and helping as much as I can. I am always trying my best to learn something new. I just finished Henry's bootcamp and I'm continuing my education on Data Science in Facultad de Ciencias Exactas y Naturales, UBA."
+  },
+  [
+      {
+        "id": 1,
+        "title": "Rebirth, Pet Adoption Network",
+        "description": "I participated in an agile development team with SCRUM methodology in one-week sprints presenting to a Product Owner progress on the development of a pet adoption app, which aims to facilitate communication between users who wish to both give in adoption, and adopt pets, it has features such as CRUD, auth, integration of payment gateways (to make donations to pets), through version control with GIT / GITHUB, managed with Kanban methodology in Trello and Slack. Implemented technologies: React, Redux, Node, Sequelize, Bootstrap, Express, MercadoPago.",
+        "image": "/images/proyectos/Rebirth.png",
+        "gitUrl": "https://github.com/aaronstz/PF-Rebirth",
+        "previewUrl": "https://frontend-rebirth.vercel.app/"
+      },
+      {
+        "id": 2,
+        "title": "Pokemon API",
+        "description": "A website that allows to search for pokemons info, brought through Pokemon API, you can sort them alphabetically, by strength, type and if they come from the api or if they were created by users. You can create your own Pokemon, with it's own name, strength, defense, attack, image, etc. and if you want more information of him, you can access it's details. Everything was done with pure CSS without css frameworks or any external components.",
+        "image": "/images/proyectos/PokeApi.png",
+        "gitUrl": "https://github.com/aaronstz/pokeapi",
+        "previewUrl": "https://pokeapi-aaronstz.vercel.app"
+      },
+      {
+        "id": 3,
+        "title": "Portfolio",
+        "description": "My personal developer portfolio. Made with Next.js and styled with Tailwind CSS, this project represents my dedication to creating exceptional web experiences.",
+        "image": "/images/proyectos/Portfolio.jpg",
+        "gitUrl": "https://github.com/aaronstz/portfolio"
+
+      }
+  ]
+]

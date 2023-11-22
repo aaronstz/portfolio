@@ -21,7 +21,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-[#121212] ">
       <Head>
         <title>Gadiel Aaron Gerez Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
       <Navbar language={language} setLanguage={setLanguage}/>

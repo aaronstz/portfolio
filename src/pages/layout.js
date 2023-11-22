@@ -13,6 +13,11 @@ const metadata = {
   },
 };
 
+// Verificar si se puede exportar metadata
+if (process.env.NODE_ENV !== 'production') {
+  exports.metadata = metadata;
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

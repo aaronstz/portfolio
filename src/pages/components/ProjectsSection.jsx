@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import en from '../languages/en.json'
-import es from '../languages/es.json'
+import en from '../../languages/en.json'
+import es from '../../languages/es.json'
 
 
 const ProjectsSection = ({ language }) => {

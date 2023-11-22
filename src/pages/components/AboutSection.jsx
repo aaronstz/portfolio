@@ -2,8 +2,8 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import spa from "../languages/es.json";
-import en from "../languages/en.json";
+import spa from "../../languages/es.json";
+import en from "../../languages/en.json";
 
 
 const AboutSection = ({ language }) => {

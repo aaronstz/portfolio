@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import Oval from "../../../public/oval.svg";
 import Link from "next/link";
 import Image from "next/image";
 import { sendContactForm } from "../../lib/api.js";
@@ -34,15 +35,14 @@ const EmailSection = ({ language }) => {
 
     try {
       await sendContactForm(values);
-      setState(initState)
+      setState(initState);
       setEmailSubmitted(true);
-
     } catch (error) {
       setState((prev) => ({
         ...prev,
         isLoading: false,
-        error: error.message
-      }))
+        error: error.message,
+      }));
     }
   };
 
@@ -157,19 +157,14 @@ const EmailSection = ({ language }) => {
               <button
                 isLoading={isLoading}
                 type="submit"
-                className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full "
-              > {
-                !isLoading ? (
-                  <>
-                  {" "}
-                  Send Message
-                  </>
-                ): (
-                  <>
-                  Sending...
-                  </>
-                )
-              }
+                className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full h-full "
+              >
+                {" "}
+                {!isLoading ? (
+                  <p> Send Message</p>
+                ) : (
+                  <Image src={Oval} alt="oval" className="inline-flex w-5" />
+                )}
               </button>
               {emailSubmitted && (
                 <p className="text-green-500 text-sm mt-2">
@@ -212,6 +207,8 @@ const EmailSection = ({ language }) => {
                   type="email"
                   name="email"
                   id="email"
+                  value={values.email}
+                  onChange={handleChange}
                   required
                   placeholder="jacob@google.com"
                   className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
@@ -228,6 +225,8 @@ const EmailSection = ({ language }) => {
                   type="text"
                   name="subject"
                   id="subject"
+                  value={values.subject}
+                  onChange={handleChange}
                   required
                   placeholder="Solo paso a saludar"
                   className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
@@ -243,16 +242,23 @@ const EmailSection = ({ language }) => {
                 <textarea
                   name="message"
                   id="message"
+                  value={values.message}
+                  onChange={handleChange}
                   className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 resize-none"
                   placeholder="Hablemos sobre..."
                 />
               </div>
               <button
+                isLoading={isLoading}
                 type="submit"
                 className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full "
               >
                 {" "}
-                Enviar mensaje
+                {!isLoading ? (
+                  <p> Enviar mensaje</p>
+                ) : (
+                  <Image src={Oval} alt="oval" className="inline-flex w-5" />
+                )}
               </button>
               {emailSubmitted && (
                 <p className="text-green-500 text-sm mt-2">
